@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -14,61 +13,49 @@
         content="ประวัติส่วนตัวของนักเรียน"
     >
 
-    <title>
-        LOTUS QUEST | Profile
-    </title>
+    <title>LOTUS | Profile</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body class="profile-page">
+<body class="page-profile">
 
-    <!-- =========================================
+    <!-- ==============================
          NAVIGATION
-         ========================================= -->
+         ============================== -->
 
     <header class="site-header">
 
-        <nav class="navbar">
+        <nav class="navbar container">
 
-            <a href="index.html" class="logo">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">🪷</span>
 
-                <span class="logo-icon">
-                    🪷
+                <span class="brand-text">
+                    LOTUS<span>PORTFOLIO</span>
                 </span>
-
-                <span>
-                    LOTUS
-                    <strong>QUEST</strong>
-                </span>
-
             </a>
-
 
             <div class="nav-links">
 
                 <a href="index.html">
-                    HOME
+                    หน้าแรก
                 </a>
 
-                <a
-                    href="profile.html"
-                    class="active"
-                >
-                    PROFILE
+                <a href="profile.html" class="active">
+                    ประวัติส่วนตัว
                 </a>
 
                 <a href="education.html">
-                    JOURNEY
+                    การศึกษา
                 </a>
 
                 <a href="hobby.html">
-                    HOBBY
+                    งานอดิเรก
                 </a>
 
                 <a href="contact.html">
-                    CONTACT
+                    ติดต่อ
                 </a>
 
             </div>
@@ -80,46 +67,27 @@
 
     <main>
 
-        <!-- =========================================
-             PROFILE SCENE HERO
-             ========================================= -->
+        <!-- ==============================
+             PROFILE HERO SCENE
+             ============================== -->
 
-        <section class="page-scene profile-scene">
+        <section class="inner-hero profile-hero">
 
-            <div class="scene-sky"></div>
+            <div class="hero-glow glow-blue"></div>
+            <div class="hero-glow glow-pink"></div>
 
-            <div class="scene-mist mist-a"></div>
-            <div class="scene-mist mist-b"></div>
-            <div class="scene-mist mist-c"></div>
-
-
-            <!-- floating petals -->
-
-            <span class="scene-petal petal-a">
-                ✧
-            </span>
-
-            <span class="scene-petal petal-b">
-                ✦
-            </span>
-
-            <span class="scene-petal petal-c">
-                ♢
-            </span>
-
-            <span class="scene-petal petal-d">
-                ✧
-            </span>
+            <div class="mist mist-left"></div>
+            <div class="mist mist-right"></div>
 
 
-            <!-- moon glow -->
+            <div class="floating-symbol symbol-1">✦</div>
+            <div class="floating-symbol symbol-2">✧</div>
+            <div class="floating-symbol symbol-3">♡</div>
 
-            <div class="scene-glow"></div>
 
+            <div class="inner-title">
 
-            <div class="scene-title">
-
-                <span class="scene-chapter">
+                <span class="chapter-label">
                     CHAPTER 01
                 </span>
 
@@ -128,33 +96,33 @@
                 </h1>
 
                 <p>
-                    A little story about me
+                    ทำความรู้จักตัวตนของฉัน
                 </p>
 
             </div>
 
 
-            <!-- profile visual -->
+            <!-- Profile Visual -->
 
-            <div class="character-scene">
+            <div class="profile-stage">
 
-                <div class="character-aura"></div>
+                <div class="profile-aura"></div>
 
-                <div class="character-ring ring-a"></div>
-                <div class="character-ring ring-b"></div>
+                <div class="profile-ring ring-1"></div>
+                <div class="profile-ring ring-2"></div>
 
 
-                <div class="character-photo">
+                <div class="profile-photo">
 
                     <img
-                        src="https://placehold.co/600x720/EAF8FF/5573B5?text=My+Photo"
+                        src="https://placehold.co/600x750/EAF8FF/5A76B7?text=MY+PHOTO"
                         alt="รูปโปรไฟล์ของฉัน"
                     >
 
                 </div>
 
 
-                <div class="character-lotus">
+                <div class="mini-lotus">
 
                     <span></span>
                     <span></span>
@@ -169,9 +137,9 @@
             </div>
 
 
-            <!-- water -->
+            <!-- Water -->
 
-            <div class="scene-water">
+            <div class="hero-water">
 
                 <span></span>
                 <span></span>
@@ -180,127 +148,73 @@
             </div>
 
 
-            <div class="scroll-hint">
-
-                <span>
-                    SCROLL TO DISCOVER
-                </span>
-
+            <div class="hero-scroll">
+                <span>SCROLL TO DISCOVER</span>
                 <i></i>
-
             </div>
 
         </section>
 
 
-        <!-- =========================================
-             PROFILE CONTENT
-             ========================================= -->
+        <!-- ==============================
+             PROFILE INFORMATION
+             ============================== -->
 
-        <section class="content-section profile-content-section">
+        <section class="content-section">
 
-            <div class="content-wrap">
+            <div class="container">
 
-                <div class="content-intro">
+                <div class="section-heading">
 
-                    <span class="section-tag">
-                        PROFILE
+                    <span>
+                        ABOUT ME
                     </span>
 
                     <h2>
                         สวัสดี! ฉันคือ
-                        <span>[กรอกชื่อ]</span>
+                        <strong>[กรอกชื่อ]</strong>
                     </h2>
 
                     <p>
                         ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
                         ที่ชอบเรียนรู้สิ่งใหม่ ๆ
-                        และสนุกกับการทดลองทำสิ่งต่าง ๆ
+                        และสนุกกับการสร้างสรรค์ผลงาน
                     </p>
 
                 </div>
 
 
-                <!-- information -->
+                <div class="profile-info-grid">
 
-                <div class="character-info-grid">
+                    <article class="profile-info-card">
+                        <span>NAME</span>
+                        <strong>[กรอกชื่อ]</strong>
+                    </article>
 
-                    <div class="character-info-card">
+                    <article class="profile-info-card">
+                        <span>NICKNAME</span>
+                        <strong>[กรอกชื่อเล่น]</strong>
+                    </article>
 
-                        <span>
-                            NAME
-                        </span>
+                    <article class="profile-info-card">
+                        <span>AGE</span>
+                        <strong>[กรอกอายุ]</strong>
+                    </article>
 
-                        <strong>
-                            [กรอกชื่อ]
-                        </strong>
+                    <article class="profile-info-card">
+                        <span>BIRTHDAY</span>
+                        <strong>[กรอกวันเกิด]</strong>
+                    </article>
 
-                    </div>
+                    <article class="profile-info-card">
+                        <span>SCHOOL</span>
+                        <strong>[กรอกชื่อโรงเรียน]</strong>
+                    </article>
 
-
-                    <div class="character-info-card">
-
-                        <span>
-                            NICKNAME
-                        </span>
-
-                        <strong>
-                            [กรอกชื่อเล่น]
-                        </strong>
-
-                    </div>
-
-
-                    <div class="character-info-card">
-
-                        <span>
-                            AGE
-                        </span>
-
-                        <strong>
-                            [กรอกอายุ]
-                        </strong>
-
-                    </div>
-
-
-                    <div class="character-info-card">
-
-                        <span>
-                            BIRTHDAY
-                        </span>
-
-                        <strong>
-                            [กรอกวันเกิด]
-                        </strong>
-
-                    </div>
-
-
-                    <div class="character-info-card">
-
-                        <span>
-                            SCHOOL
-                        </span>
-
-                        <strong>
-                            [กรอกชื่อโรงเรียน]
-                        </strong>
-
-                    </div>
-
-
-                    <div class="character-info-card">
-
-                        <span>
-                            LOCATION
-                        </span>
-
-                        <strong>
-                            [กรอกจังหวัด]
-                        </strong>
-
-                    </div>
+                    <article class="profile-info-card">
+                        <span>LOCATION</span>
+                        <strong>[กรอกจังหวัด]</strong>
+                    </article>
 
                 </div>
 
@@ -309,19 +223,19 @@
         </section>
 
 
-        <!-- =========================================
-             ABOUT
-             ========================================= -->
+        <!-- ==============================
+             STORY
+             ============================== -->
 
-        <section class="profile-story">
+        <section class="story-section">
 
-            <div class="story-glow"></div>
+            <div class="story-decoration"></div>
 
-            <div class="story-layout">
+            <div class="container story-grid">
 
-                <div class="story-heading">
+                <div>
 
-                    <span>
+                    <span class="chapter-label dark">
                         MY STORY
                     </span>
 
@@ -336,13 +250,13 @@
 
                     <p>
                         ฉันเป็นคนที่ชอบเรียนรู้
-                        และสนใจสิ่งใหม่ ๆ
+                        และชอบทดลองทำสิ่งใหม่ ๆ
                         เพราะเชื่อว่าทุกประสบการณ์
-                        สามารถทำให้เราเติบโตได้
+                        สามารถนำมาพัฒนาตัวเองได้
                     </p>
 
                     <p>
-                        ในเวลาว่าง ฉันชอบ
+                        ในเวลาว่างฉันชอบ
                         [กรอกงานอดิเรก]
                         และมีความสนใจด้าน
                         [กรอกความสนใจ]
@@ -351,9 +265,7 @@
 
                     <div class="story-quote">
 
-                        <span>
-                            “
-                        </span>
+                        <span>“</span>
 
                         <p>
                             ค่อย ๆ เรียนรู้
@@ -371,17 +283,17 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- ==============================
              VALUES
-             ========================================= -->
+             ============================== -->
 
         <section class="content-section">
 
-            <div class="content-wrap">
+            <div class="container">
 
-                <div class="content-intro centered">
+                <div class="section-heading center">
 
-                    <span class="section-tag">
+                    <span>
                         MY VALUES
                     </span>
 
@@ -392,39 +304,35 @@
                 </div>
 
 
-                <div class="profile-values">
+                <div class="value-grid">
 
-                    <article class="profile-value value-water">
+                    <article class="value-card">
 
-                        <div class="value-symbol">
-                            💧
+                        <div class="value-icon">
+                            💡
                         </div>
 
-                        <span>
-                            01
-                        </span>
+                        <span>01</span>
 
                         <h3>
                             เรียนรู้
                         </h3>
 
                         <p>
-                            เปิดใจรับความรู้ใหม่
-                            และเรียนรู้จากประสบการณ์
+                            เปิดใจรับความรู้
+                            และประสบการณ์ใหม่ ๆ
                         </p>
 
                     </article>
 
 
-                    <article class="profile-value value-lotus">
+                    <article class="value-card">
 
-                        <div class="value-symbol">
-                            🪷
+                        <div class="value-icon">
+                            🎨
                         </div>
 
-                        <span>
-                            02
-                        </span>
+                        <span>02</span>
 
                         <h3>
                             สร้างสรรค์
@@ -432,29 +340,27 @@
 
                         <p>
                             สนุกกับการคิด
-                            และสร้างสิ่งใหม่ด้วยตัวเอง
+                            และสร้างผลงานของตัวเอง
                         </p>
 
                     </article>
 
 
-                    <article class="profile-value value-star">
+                    <article class="value-card">
 
-                        <div class="value-symbol">
-                            ✦
+                        <div class="value-icon">
+                            🌱
                         </div>
 
-                        <span>
-                            03
-                        </span>
+                        <span>03</span>
 
                         <h3>
                             พัฒนา
                         </h3>
 
                         <p>
-                            พยายามพัฒนาตัวเอง
-                            ให้ดีขึ้นทีละขั้น
+                            พยายามทำให้ตัวเอง
+                            เก่งขึ้นทีละนิด
                         </p>
 
                     </article>
@@ -468,23 +374,39 @@
     </main>
 
 
-    <footer class="footer">
+    <!-- ==============================
+         FOOTER
+         ============================== -->
 
-        <div class="footer-lotus">
-            🪷
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="index.html" class="footer-brand">
+                    🪷 LOTUS PORTFOLIO
+                </a>
+
+                <p>
+                    Student Portfolio
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">หน้าแรก</a>
+                <a href="profile.html">ประวัติส่วนตัว</a>
+                <a href="education.html">การศึกษา</a>
+                <a href="hobby.html">งานอดิเรก</a>
+                <a href="contact.html">ติดต่อ</a>
+
+            </div>
+
         </div>
 
-        <h2>
-            LOTUS QUEST
-        </h2>
-
-        <p>
-            A little adventure about me
-        </p>
-
-        <small>
+        <div class="footer-bottom">
             © 2026 [กรอกชื่อ] · Student Portfolio
-        </small>
+        </div>
 
     </footer>
 
