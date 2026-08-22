@@ -4445,3 +4445,720 @@ td {
             .01ms !important;
     }
 }
+/* =========================================================
+   LOTUS POND PREMIUM DETAILS
+   ========================================================= */
+
+
+/* =========================================================
+   AMBIENT LIGHT
+   ========================================================= */
+
+.ambient-light {
+    position: absolute;
+    z-index: 0;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 203, 228, 0.35) 0%,
+            rgba(204, 192, 255, 0.2) 34%,
+            rgba(166, 228, 255, 0.12) 55%,
+            transparent 72%
+        );
+
+    filter: blur(6px);
+
+    animation:
+        ambientPulse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   SPARKLES
+   ========================================================= */
+
+.sparkle {
+    position: absolute;
+    z-index: 7;
+
+    color: rgba(255, 218, 239, 0.8);
+
+    font-family: "Kanit", sans-serif;
+
+    text-shadow:
+        0 0 10px rgba(255, 190, 221, 0.55);
+
+    animation:
+        sparkleFloat 3.5s ease-in-out infinite;
+}
+
+.sparkle-1 {
+    top: 10%;
+    left: 25%;
+    font-size: 18px;
+}
+
+.sparkle-2 {
+    top: 22%;
+    right: 12%;
+    font-size: 14px;
+    animation-delay: .8s;
+}
+
+.sparkle-3 {
+    bottom: 30%;
+    left: 9%;
+    font-size: 26px;
+    animation-delay: 1.5s;
+}
+
+.sparkle-4 {
+    bottom: 13%;
+    right: 25%;
+    font-size: 16px;
+    animation-delay: 2.2s;
+}
+
+
+/* =========================================================
+   FLOATING PETALS
+   ========================================================= */
+
+.floating-petal {
+    position: absolute;
+    z-index: 7;
+
+    color: rgba(245, 169, 200, 0.55);
+
+    font-size: 18px;
+
+    animation:
+        petalFloat 8s ease-in-out infinite;
+}
+
+.floating-petal.petal-1 {
+    left: 18%;
+    top: 32%;
+}
+
+.floating-petal.petal-2 {
+    right: 17%;
+    top: 39%;
+    animation-delay: 2s;
+}
+
+.floating-petal.petal-3 {
+    left: 32%;
+    bottom: 16%;
+    animation-delay: 4s;
+}
+
+
+/* =========================================================
+   WATER BUBBLES
+   ========================================================= */
+
+.water-bubble {
+    position: absolute;
+    z-index: 4;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.48);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    animation:
+        bubbleRise 6s linear infinite;
+}
+
+.water-bubble.bubble-1 {
+    width: 8px;
+    height: 8px;
+
+    left: 25%;
+    bottom: 18%;
+}
+
+.water-bubble.bubble-2 {
+    width: 13px;
+    height: 13px;
+
+    left: 52%;
+    bottom: 14%;
+
+    animation-delay: 2s;
+}
+
+.water-bubble.bubble-3 {
+    width: 6px;
+    height: 6px;
+
+    right: 28%;
+    bottom: 20%;
+
+    animation-delay: 3.5s;
+}
+
+
+/* =========================================================
+   THIRD KOI
+   ========================================================= */
+
+.koi-three {
+    z-index: 6;
+
+    left: 34%;
+    bottom: 11%;
+
+    transform: scale(.55);
+
+    opacity: .78;
+
+    animation:
+        koiMoveThree
+        14s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PROFILE ORB ENHANCEMENT
+   ========================================================= */
+
+.profile-orb::before {
+
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    inset: -15px;
+
+    border-radius:
+        50%
+        50%
+        45%
+        45%;
+
+    border:
+        1px solid rgba(153, 211, 244, 0.32);
+
+    animation:
+        orbPulse 4s ease-in-out infinite;
+}
+
+.profile-orb::after {
+
+    content: "";
+
+    position: absolute;
+    z-index: -2;
+
+    inset: -34px;
+
+    border-radius:
+        50%
+        50%
+        45%
+        45%;
+
+    border:
+        1px dashed rgba(185, 171, 245, 0.22);
+
+    animation:
+        orbRotate 18s linear infinite;
+}
+
+
+/* =========================================================
+   POND LIGHT
+   ========================================================= */
+
+.pond::before {
+
+    content: "";
+
+    position: absolute;
+    z-index: 0;
+
+    left: 10%;
+    right: 10%;
+    top: 25px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            transparent
+        );
+
+    filter: blur(8px);
+
+    animation:
+        waterShine 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOTUS GLOW
+   ========================================================= */
+
+.pond-lotus {
+
+    filter:
+        drop-shadow(
+            0 4px 12px
+            rgba(255, 157, 199, 0.26)
+        );
+
+    animation:
+        lotusTilt 5s ease-in-out infinite;
+}
+
+.pond-lotus::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 56%;
+
+    width: 20px;
+    height: 20px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 225, 156, 0.75);
+
+    filter: blur(7px);
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   SCENE TAG ENHANCEMENT
+   ========================================================= */
+
+.scene-tag {
+
+    border-color:
+        rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 15px 35px
+        rgba(81, 113, 159, 0.13),
+
+        0 0 25px
+        rgba(186, 168, 245, 0.08);
+
+    animation:
+        tagFloat 4.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BUTTON SHINE
+   ========================================================= */
+
+.btn-primary,
+.btn-soft {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.btn-primary::after,
+.btn-soft::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: -90px;
+
+    width: 50px;
+
+    transform:
+        skewX(-20deg);
+
+    background:
+        rgba(255, 255, 255, 0.38);
+
+    transition:
+        .5s ease;
+}
+
+.btn-primary:hover::after,
+.btn-soft:hover::after {
+
+    left: calc(100% + 40px);
+}
+
+
+/* =========================================================
+   PREMIUM HOVER CARD
+   ========================================================= */
+
+.preview-card,
+.hobby-card,
+.value-card,
+.info-box,
+.contact-box,
+.timeline-card {
+
+    position: relative;
+}
+
+.preview-card::before,
+.hobby-card::before,
+.value-card::before,
+.info-box::before,
+.contact-box::before,
+.timeline-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    padding: 1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent,
+            rgba(120, 169, 247, 0.28),
+            rgba(185, 171, 245, 0.25),
+            rgba(245, 169, 200, 0.22),
+            transparent
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    opacity: 0;
+
+    transition:
+        .35s ease;
+
+    pointer-events: none;
+}
+
+.preview-card:hover::before,
+.hobby-card:hover::before,
+.value-card:hover::before,
+.info-box:hover::before,
+.contact-box:hover::before,
+.timeline-card:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SECTION DECORATION
+   ========================================================= */
+
+.section-heading h2::after {
+
+    content:
+        "  ✦";
+
+    color:
+        var(--pink);
+
+    font-size:
+        .55em;
+
+    vertical-align:
+        middle;
+
+    opacity:
+        .7;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes ambientPulse {
+
+    0%,
+    100% {
+        transform: scale(.92);
+        opacity: .65;
+    }
+
+    50% {
+        transform: scale(1.06);
+        opacity: 1;
+    }
+}
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(.9)
+            rotate(0deg);
+
+        opacity: .45;
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            scale(1.16)
+            rotate(15deg);
+
+        opacity: 1;
+    }
+}
+
+@keyframes petalFloat {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .8;
+    }
+
+    50% {
+        transform:
+            translate3d(25px, -32px, 0)
+            rotate(90deg);
+
+        opacity: .6;
+    }
+
+    85% {
+        opacity: .25;
+    }
+
+    100% {
+        transform:
+            translate3d(-10px, -70px, 0)
+            rotate(180deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes bubbleRise {
+
+    0% {
+        transform:
+            translateY(20px)
+            scale(.6);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .75;
+    }
+
+    100% {
+        transform:
+            translateY(-170px)
+            translateX(20px)
+            scale(1.15);
+
+        opacity: 0;
+    }
+}
+
+@keyframes koiMoveThree {
+
+    0% {
+        transform:
+            translateX(-50px)
+            translateY(0)
+            rotate(4deg)
+            scale(.55);
+    }
+
+    25% {
+        transform:
+            translateX(50px)
+            translateY(-22px)
+            rotate(-5deg)
+            scale(.55);
+    }
+
+    50% {
+        transform:
+            translateX(150px)
+            translateY(8px)
+            rotate(4deg)
+            scale(.55);
+    }
+
+    75% {
+        transform:
+            translateX(50px)
+            translateY(-15px)
+            rotate(-4deg)
+            scale(.55);
+    }
+
+    100% {
+        transform:
+            translateX(-50px)
+            translateY(0)
+            rotate(4deg)
+            scale(.55);
+    }
+}
+
+@keyframes orbPulse {
+
+    0%,
+    100% {
+        transform: scale(.98);
+        opacity: .45;
+    }
+
+    50% {
+        transform: scale(1.02);
+        opacity: .9;
+    }
+}
+
+@keyframes orbRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes waterShine {
+
+    0%,
+    100% {
+        transform:
+            translateX(-15%)
+            scaleX(.7);
+
+        opacity: .35;
+    }
+
+    50% {
+        transform:
+            translateX(15%)
+            scaleX(1.1);
+
+        opacity: .8;
+    }
+}
+
+@keyframes lotusTilt {
+
+    0%,
+    100% {
+        transform:
+            rotate(-2deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(2deg)
+            translateY(-4px);
+    }
+}
+
+@keyframes tagFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE PREMIUM TUNING
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+    .ambient-light {
+        width: 330px;
+        height: 330px;
+    }
+
+    .sparkle {
+        opacity: .55;
+    }
+
+    .floating-petal {
+        font-size: 14px;
+    }
+
+    .koi-three {
+        bottom: 9%;
+        opacity: .55;
+    }
+
+    .profile-orb::after {
+        inset: -20px;
+    }
+
+    .pond::before {
+        left: 15%;
+        right: 15%;
+    }
+
+    .scene-tag {
+        animation: none;
+    }
+}
