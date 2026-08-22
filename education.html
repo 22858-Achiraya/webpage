@@ -9,11 +9,6 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="ประวัติการศึกษาของนักเรียน"
-    >
-
     <title>
         My Portfolio | การศึกษา
     </title>
@@ -22,7 +17,8 @@
 
 </head>
 
-<body>
+
+<body class="education-page">
 
     <header class="site-header">
 
@@ -30,11 +26,11 @@
 
             <a href="index.html" class="brand">
 
-                <span class="brand-symbol">
+                <span class="brand-icon">
                     🪷
                 </span>
 
-                <span class="brand-text">
+                <span class="brand-name">
                     My<span>Portfolio</span>
                 </span>
 
@@ -85,7 +81,11 @@
 
     <main>
 
-        <section class="page-hero">
+        <section class="page-hero education-hero">
+
+            <div class="education-sparkles">
+                ✦　✧　✦
+            </div>
 
             <div class="container">
 
@@ -124,17 +124,20 @@
                 </div>
 
 
-                <div class="timeline">
+                <div class="education-timeline">
 
-                    <article class="timeline-item">
+                    <span class="timeline-water"></span>
 
-                        <span class="timeline-dot">
+
+                    <article class="education-item">
+
+                        <div class="education-dot">
                             01
-                        </span>
+                        </div>
 
-                        <div class="timeline-card">
+                        <div class="education-card">
 
-                            <span class="timeline-label">
+                            <span>
                                 ประถมศึกษา
                             </span>
 
@@ -147,20 +150,24 @@
                                 และค้นพบสิ่งที่ตัวเองสนใจ
                             </p>
 
+                            <small>
+                                ✦ First Step
+                            </small>
+
                         </div>
 
                     </article>
 
 
-                    <article class="timeline-item">
+                    <article class="education-item">
 
-                        <span class="timeline-dot">
+                        <div class="education-dot">
                             02
-                        </span>
+                        </div>
 
-                        <div class="timeline-card">
+                        <div class="education-card">
 
-                            <span class="timeline-label">
+                            <span>
                                 มัธยมศึกษาตอนต้น
                             </span>
 
@@ -173,20 +180,24 @@
                                 และค้นพบวิชาที่ตัวเองชอบ
                             </p>
 
+                            <small>
+                                ✦ Discover
+                            </small>
+
                         </div>
 
                     </article>
 
 
-                    <article class="timeline-item">
+                    <article class="education-item">
 
-                        <span class="timeline-dot">
+                        <div class="education-dot">
                             03
-                        </span>
+                        </div>
 
-                        <div class="timeline-card">
+                        <div class="education-card current">
 
-                            <span class="timeline-label">
+                            <span>
                                 ปัจจุบัน
                             </span>
 
@@ -199,6 +210,10 @@
                                 ทักษะ และประสบการณ์
                                 เพื่อเตรียมพร้อมสำหรับอนาคต
                             </p>
+
+                            <small>
+                                ✦ Growing
+                            </small>
 
                         </div>
 
@@ -215,13 +230,13 @@
 
             <div class="container">
 
-                <div class="education-highlight">
+                <div class="current-school">
 
-                    <div class="education-main">
+                    <div class="school-main">
 
-                        <span class="education-icon">
+                        <div class="school-icon">
                             🎓
-                        </span>
+                        </div>
 
                         <div>
 
@@ -242,7 +257,7 @@
                     </div>
 
 
-                    <div class="education-info">
+                    <div class="school-info">
 
                         <div>
                             <span>โรงเรียน</span>
@@ -298,7 +313,7 @@
                 </div>
 
 
-                <div class="table-wrapper">
+                <div class="table-box">
 
                     <table>
 
@@ -317,71 +332,38 @@
                         <tbody>
 
                             <tr>
-
-                                <td>
-                                    ประถมศึกษา
-                                </td>
-
-                                <td>
-                                    [กรอกชื่อโรงเรียน]
-                                </td>
-
-                                <td>
-                                    ประถมศึกษา
-                                </td>
-
+                                <td>ประถมศึกษา</td>
+                                <td>[กรอกชื่อโรงเรียน]</td>
+                                <td>ประถมศึกษา</td>
                                 <td>
                                     <span class="status">
                                         สำเร็จ
                                     </span>
                                 </td>
-
                             </tr>
 
 
                             <tr>
-
-                                <td>
-                                    มัธยมต้น
-                                </td>
-
-                                <td>
-                                    [กรอกชื่อโรงเรียน]
-                                </td>
-
-                                <td>
-                                    ม.1 - ม.2
-                                </td>
-
+                                <td>มัธยมต้น</td>
+                                <td>[กรอกชื่อโรงเรียน]</td>
+                                <td>ม.1 - ม.2</td>
                                 <td>
                                     <span class="status">
                                         สำเร็จ
                                     </span>
                                 </td>
-
                             </tr>
 
 
                             <tr>
-
+                                <td>ปัจจุบัน</td>
+                                <td>[กรอกชื่อโรงเรียน]</td>
+                                <td>ม.3</td>
                                 <td>
-                                    ปัจจุบัน
-                                </td>
-
-                                <td>
-                                    [กรอกชื่อโรงเรียน]
-                                </td>
-
-                                <td>
-                                    ม.3
-                                </td>
-
-                                <td>
-                                    <span class="status current">
+                                    <span class="status current-status">
                                         กำลังศึกษา
                                     </span>
                                 </td>
-
                             </tr>
 
                         </tbody>
@@ -403,10 +385,7 @@
 
             <div>
 
-                <a
-                    href="index.html"
-                    class="footer-logo"
-                >
+                <a href="index.html" class="footer-logo">
                     🪷 MyPortfolio
                 </a>
 
