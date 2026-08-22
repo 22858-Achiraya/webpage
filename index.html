@@ -3,150 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="เว็บไซต์ Portfolio ส่วนตัวของนักเรียนชั้นมัธยมศึกษาปีที่ 3">
-  <title>หน้าแรก | Lotus Portfolio</title>
+  <meta name="description" content="เว็บไซต์ Portfolio แนะนำตัวนักเรียนชั้นมัธยมศึกษาปีที่ 3">
+  <title>My Lotus Portfolio | หน้าแรก</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="site-shell">
 
-  <div class="pond-bg" aria-hidden="true">
-    <div class="sun-glow"></div>
-
-    <div class="reed left"></div>
-    <div class="reed right"></div>
-
-    <div class="lily one"></div>
-    <div class="lily two"></div>
-    <div class="lily three"></div>
-    <div class="lily four"></div>
-
-    <div class="lotus a">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <i></i>
-    </div>
-
-    <div class="lotus b">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <i></i>
-    </div>
-
-    <div class="lotus c">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <i></i>
-    </div>
-
-    <div class="koi k1"></div>
-    <div class="koi k2"></div>
-    <div class="koi k3"></div>
-
-    <div class="bubble b1"></div>
-    <div class="bubble b2"></div>
-    <div class="bubble b3"></div>
-  </div>
-
-
-  <header class="site-header">
-
-    <nav class="navbar container" aria-label="เมนูหลัก">
+  <div class="nav-wrap">
+    <nav class="navbar" aria-label="เมนูหลัก">
 
       <a class="brand" href="index.html">
         <span class="brand-mark">🪷</span>
-        <span>Lotus Portfolio</span>
+
+        <span>
+          My Lotus Portfolio
+          <small>Student • M.3 Portfolio</small>
+        </span>
       </a>
 
-      <ul class="nav-links">
-
-        <li>
-          <a class="active" href="index.html">หน้าแรก</a>
-        </li>
-
-        <li>
-          <a href="profile.html">ประวัติส่วนตัว</a>
-        </li>
-
-        <li>
-          <a href="education.html">การศึกษา</a>
-        </li>
-
-        <li>
-          <a href="hobby.html">งานอดิเรก</a>
-        </li>
-
-        <li>
-          <a href="contact.html">ติดต่อ</a>
-        </li>
-
-      </ul>
+      <div class="nav-links">
+        <a class="active" href="index.html">หน้าแรก</a>
+        <a href="profile.html">ประวัติส่วนตัว</a>
+        <a href="education.html">การศึกษา</a>
+        <a href="hobby.html">งานอดิเรก</a>
+        <a href="contact.html">ติดต่อ</a>
+      </div>
 
     </nav>
-
-  </header>
-
+  </div>
 
   <main>
 
+    <!-- HERO -->
     <section class="hero">
 
       <div class="container hero-grid">
 
-        <div class="hero-copy glass fade-up">
+        <div class="reveal">
 
           <div class="eyebrow">
-            ✦ STUDENT PORTFOLIO ✦
+            <span></span>
+            Welcome to my little creative pond
           </div>
 
           <h1>
-            สวัสดีค่ะ<br>
-            ฉันชื่อ <span>[กรอกชื่อ]</span>
+            สวัสดีครับ/ค่ะ<br>
+            <span class="gradient-text">ฉันคือ [กรอกชื่อ]</span>
           </h1>
 
-          <p class="hero-lead">
-            นักเรียนชั้นมัธยมศึกษาปีที่ 3
-          </p>
-
           <p>
-            ยินดีต้อนรับสู่เว็บไซต์แนะนำตัวของฉัน
-            เว็บไซต์นี้รวบรวมประวัติ การศึกษา งานอดิเรก
-            และสิ่งที่ฉันสนใจไว้ในบรรยากาศบ่อน้ำดอกบัว
-            ที่อ่อนโยนและสดใส
+            นักเรียนชั้นมัธยมศึกษาปีที่ 3
+            ที่ชอบเรียนรู้สิ่งใหม่ ๆ
+            ชอบสร้างผลงาน
+            และสนุกกับการออกแบบโลกของตัวเองผ่านเทคโนโลยี
           </p>
 
-          <div class="actions">
+          <div class="hero-quote">
+            <i></i>
+
+            <div>
+              “ทุกวันคือโอกาสใหม่ที่จะเติบโต
+              เหมือนดอกบัวที่ค่อย ๆ ผลิบานบนผิวน้ำ”
+            </div>
+          </div>
+
+          <div class="btn-row">
 
             <a class="btn btn-primary" href="profile.html">
-              🌸 รู้จักฉันมากขึ้น
+              รู้จักฉันมากขึ้น →
             </a>
 
-            <a class="btn btn-secondary" href="hobby.html">
-              ดูงานอดิเรกของฉัน →
+            <a class="btn btn-light" href="hobby.html">
+              ดูงานอดิเรกของฉัน ✨
             </a>
 
           </div>
 
         </div>
 
+        <!-- WATER SCENE -->
+        <div
+          class="water-scene reveal delay-1"
+          aria-label="ภาพจำลองสระน้ำดอกบัวและปลาคาร์ฟ"
+        >
 
-        <div class="hero-art fade-up delay-1">
+          <div class="water-glow"></div>
+          <div class="mist"></div>
+          <div class="wave-line"></div>
 
-          <div class="photo-orbit">
-
-            <img
-              src="https://placehold.co/900x900/eafafa/176078?text=PROFILE+PHOTO"
-              alt="รูปโปรไฟล์ของฉัน"
-            >
-
+          <div class="hero-badge">
+            🪷 Lotus Pond • Koi Garden
           </div>
 
-          <div class="float-badge badge-top">
-            🪷 ชอบเรียนรู้สิ่งใหม่
+          <div class="lotus one"></div>
+          <div class="lotus two"></div>
+          <div class="lotus three"></div>
+
+          <div class="pad a"></div>
+          <div class="pad b"></div>
+          <div class="pad c"></div>
+
+          <div class="koi k1">
+            <span class="fin"></span>
           </div>
 
-          <div class="float-badge badge-bottom">
-            🐟 Creative • Curious • Friendly
+          <div class="koi k2">
+            <span class="fin"></span>
+          </div>
+
+          <div class="koi k3">
+            <span class="fin"></span>
+          </div>
+
+          <div class="koi k4">
+            <span class="fin"></span>
+          </div>
+
+          <div class="hero-note">
+            🐟 ปลาคาร์ฟกำลังว่ายผ่านสวนดอกบัว…
           </div>
 
         </div>
@@ -156,47 +131,205 @@
     </section>
 
 
-    <section
-      class="container glass highlights fade-up delay-2"
-      aria-label="ข้อมูลเด่น"
-    >
+    <!-- ABOUT -->
+    <section class="section" id="highlights">
 
-      <div class="highlight">
-        <strong>ม.3/[ห้อง]</strong>
-        <span>ระดับชั้น</span>
-      </div>
+      <div class="container">
 
-      <div class="highlight">
-        <strong>[ชื่อโรงเรียน]</strong>
-        <span>โรงเรียน</span>
-      </div>
+        <div class="section-head">
 
-      <div class="highlight">
-        <strong>[จังหวัด]</strong>
-        <span>จังหวัด</span>
-      </div>
+          <div>
+            <div class="section-kicker">
+              a little about me
+            </div>
 
-      <div class="highlight">
-        <strong>[วิชาที่ชอบ]</strong>
-        <span>วิชาที่สนใจ</span>
+            <h2 class="section-title">
+              พื้นที่เล็ก ๆ ที่รวมตัวตนของฉัน
+            </h2>
+          </div>
+
+          <p class="section-subtitle">
+            เว็บไซต์นี้ออกแบบให้เหมือนสวนดอกบัวส่วนตัว
+            แต่ละหน้าคืออีกหนึ่งมุมที่ช่วยให้รู้จักฉันมากขึ้น
+          </p>
+
+        </div>
+
+
+        <div class="info-grid">
+
+          <article class="lake-card about-card reveal">
+
+            <div class="card-content">
+
+              <h3>
+                🌿 About Me
+              </h3>
+
+              <p>
+                ฉันเป็นนักเรียนที่กำลังค้นหาความชอบของตัวเอง
+                ทั้งด้านการเรียน เทคโนโลยี ความคิดสร้างสรรค์
+                และกิจกรรมที่ทำแล้วมีความสุข
+              </p>
+
+              <div class="stat-row">
+
+                <div class="stat">
+                  <strong>ม.3</strong>
+                  <span>ระดับการศึกษา</span>
+                </div>
+
+                <div class="stat">
+                  <strong>2026</strong>
+                  <span>ปีการศึกษา</span>
+                </div>
+
+                <div class="stat">
+                  <strong>100%</strong>
+                  <span>ความตั้งใจ</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="lake-card about-card reveal delay-1">
+
+            <div class="card-content">
+
+              <h3>
+                🫧 My Style
+              </h3>
+
+              <p>
+                ฉันชอบผลงานที่ดูสะอาด ทันสมัย
+                มีลูกเล่นเล็ก ๆ
+                และที่สำคัญคือสะท้อนความเป็นตัวเองออกมาได้ชัดเจน
+              </p>
+
+              <div class="quote-box">
+
+                <p>
+                  “เป้าหมายไม่ได้มีแค่ทำให้เสร็จ
+                  แต่คือทำให้คนที่เห็นรู้สึกว่า
+                  เราตั้งใจกับมันจริง ๆ”
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
       </div>
 
     </section>
 
 
-    <section class="section">
+    <!-- EXPLORE -->
+    <section class="section" style="padding-top:12px">
 
-      <div class="container section-title">
+      <div class="container">
 
-        <p>MY PORTFOLIO</p>
+        <div class="section-head">
 
-        <h2>
-          เรื่องราวเล็ก ๆ ที่อยากให้คุณรู้จัก
-        </h2>
+          <div>
 
-        <p>
-          เลือกชมส่วนต่าง ๆ ของเว็บไซต์ได้จากเมนูด้านบน
-        </p>
+            <div class="section-kicker">
+              explore
+            </div>
+
+            <h2 class="section-title">
+              ลองเดินชมสวนของฉัน
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <a
+            class="lake-card feature-card"
+            href="profile.html"
+          >
+
+            <div class="card-content">
+
+              <div class="icon-bubble">
+                👤
+              </div>
+
+              <h3>
+                ประวัติส่วนตัว
+              </h3>
+
+              <p>
+                รู้จักข้อมูลพื้นฐาน ตัวตน
+                และเรื่องเล็ก ๆ ที่เป็นฉัน
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="lake-card feature-card"
+            href="education.html"
+          >
+
+            <div class="card-content">
+
+              <div class="icon-bubble">
+                🎓
+              </div>
+
+              <h3>
+                การศึกษา
+              </h3>
+
+              <p>
+                ดูเส้นทางการเรียน จุดเด่น
+                และสิ่งที่ฉันอยากพัฒนาต่อ
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="lake-card feature-card"
+            href="hobby.html"
+          >
+
+            <div class="card-content">
+
+              <div class="icon-bubble">
+                🎮
+              </div>
+
+              <h3>
+                งานอดิเรก
+              </h3>
+
+              <p>
+                พื้นที่สนุก ๆ ที่รวมสิ่งที่ฉันชอบ
+                และความสนใจต่าง ๆ
+              </p>
+
+            </div>
+
+          </a>
+
+        </div>
 
       </div>
 
@@ -205,29 +338,31 @@
   </main>
 
 
-  <footer>
+  <footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="container">
 
-      <div>
+      <div class="footer-grid">
 
-        <div class="footer-brand">
-          🪷 Lotus Portfolio
+        <div>
+
+          <div class="footer-brand">
+            🪷 My Lotus Portfolio
+          </div>
+
+          <p>
+            Portfolio Website สำหรับนักเรียนชั้นมัธยมศึกษาปีที่ 3
+            — ออกแบบด้วย HTML5 + CSS3
+            และหัวใจของคนที่อยากสร้างผลงานดี ๆ
+          </p>
+
         </div>
 
-        <p>
-          เว็บไซต์แนะนำตัวสำหรับโครงงานวิชาคอมพิวเตอร์<br>
-          นักเรียนชั้นมัธยมศึกษาปีที่ 3
-        </p>
 
-      </div>
-
-
-      <div>
-
-        <h3>เมนู</h3>
-
-        <div class="footer-links">
+        <nav
+          class="footer-nav"
+          aria-label="ลิงก์ท้ายเว็บไซต์"
+        >
 
           <a href="index.html">หน้าแรก</a>
           <a href="profile.html">ประวัติส่วนตัว</a>
@@ -235,29 +370,27 @@
           <a href="hobby.html">งานอดิเรก</a>
           <a href="contact.html">ติดต่อ</a>
 
-        </div>
+        </nav>
 
       </div>
 
 
-      <div>
+      <div class="copyright">
 
-        <h3>ข้อมูลนักเรียน</h3>
+        <span>
+          © 2026 [กรอกชื่อ] • ม.3/[กรอกห้อง]
+        </span>
 
-        <p>ชื่อ: [กรอกชื่อ]</p>
-        <p>ชั้น: ม.3/[กรอกห้อง]</p>
-        <p>โรงเรียน: [กรอกชื่อโรงเรียน]</p>
+        <span>
+          Made with curiosity & creativity 🐟
+        </span>
 
       </div>
 
-    </div>
-
-
-    <div class="copyright">
-      © 2026 Lotus Portfolio • จัดทำเพื่อโครงงานวิชาคอมพิวเตอร์
     </div>
 
   </footer>
 
+</div>
 </body>
 </html>
