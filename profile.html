@@ -2,277 +2,266 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="ประวัติส่วนตัวของนักเรียน"
-    >
-
-    <title>LOTUS | Profile</title>
+    <title>LOTUS QUEST | Profile</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page-profile">
+<body class="profile-page">
 
-    <!-- ==============================
+    <!-- =========================
+         BACKGROUND SCENE
+    ========================== -->
+
+    <div class="scene">
+
+        <!-- Moon -->
+        <div class="moon"></div>
+
+        <!-- Glow -->
+        <div class="sky-glow"></div>
+
+        <!-- Floating particles -->
+        <span class="spark spark-1">✦</span>
+        <span class="spark spark-2">✧</span>
+        <span class="spark spark-3">✦</span>
+        <span class="spark spark-4">✧</span>
+        <span class="spark spark-5">✦</span>
+
+        <!-- Floating petals -->
+        <span class="petal petal-1">🌸</span>
+        <span class="petal petal-2">🌸</span>
+        <span class="petal petal-3">🌸</span>
+        <span class="petal petal-4">🌸</span>
+
+        <!-- Water -->
+        <div class="water">
+
+            <div class="water-wave wave-1"></div>
+            <div class="water-wave wave-2"></div>
+            <div class="water-wave wave-3"></div>
+
+            <!-- Lotus -->
+            <div class="lotus lotus-left">
+                <span>🌸</span>
+            </div>
+
+            <div class="lotus lotus-right">
+                <span>🌸</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
          NAVIGATION
-         ============================== -->
+    ========================== -->
 
-    <header class="site-header">
+    <header class="navbar">
 
-        <nav class="navbar container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🪷</span>
+            <span>LOTUS QUEST</span>
+        </a>
 
-            <a href="index.html" class="brand">
-                <span class="brand-icon">🪷</span>
+        <nav class="nav-menu">
 
-                <span class="brand-text">
-                    LOTUS<span>PORTFOLIO</span>
-                </span>
+            <a href="index.html">
+                <span>⌂</span>
+                หน้าแรก
             </a>
 
-            <div class="nav-links">
+            <a href="profile.html" class="active">
+                <span>✦</span>
+                โปรไฟล์
+            </a>
 
-                <a href="index.html">
-                    หน้าแรก
-                </a>
+            <a href="education.html">
+                <span>📖</span>
+                การศึกษา
+            </a>
 
-                <a href="profile.html" class="active">
-                    ประวัติส่วนตัว
-                </a>
+            <a href="hobby.html">
+                <span>🎮</span>
+                งานอดิเรก
+            </a>
 
-                <a href="education.html">
-                    การศึกษา
-                </a>
-
-                <a href="hobby.html">
-                    งานอดิเรก
-                </a>
-
-                <a href="contact.html">
-                    ติดต่อ
-                </a>
-
-            </div>
+            <a href="contact.html">
+                <span>💌</span>
+                ติดต่อ
+            </a>
 
         </nav>
 
     </header>
 
 
-    <main>
+    <!-- =========================
+         MAIN PROFILE SCENE
+    ========================== -->
 
-        <!-- ==============================
-             PROFILE HERO SCENE
-             ============================== -->
+    <main class="profile-main">
 
-        <section class="inner-hero profile-hero">
+        <!-- Chapter -->
+        <div class="chapter">
 
-            <div class="hero-glow glow-blue"></div>
-            <div class="hero-glow glow-pink"></div>
+            <span class="chapter-line"></span>
 
-            <div class="mist mist-left"></div>
-            <div class="mist mist-right"></div>
+            <p>LOTUS QUEST • CHAPTER 01</p>
 
+            <span class="chapter-line"></span>
 
-            <div class="floating-symbol symbol-1">✦</div>
-            <div class="floating-symbol symbol-2">✧</div>
-            <div class="floating-symbol symbol-3">♡</div>
+        </div>
 
 
-            <div class="inner-title">
+        <!-- Title -->
 
-                <span class="chapter-label">
-                    CHAPTER 01
-                </span>
+        <section class="profile-heading">
 
-                <h1>
-                    WHO AM I?
-                </h1>
+            <span class="small-title">
+                ✦ CHARACTER PROFILE ✦
+            </span>
 
-                <p>
-                    ทำความรู้จักตัวตนของฉัน
-                </p>
+            <h1>
+                รู้จัก
+                <span>ตัวฉัน</span>
+            </h1>
 
-            </div>
+            <p>
+                ทุกการเดินทางมีเรื่องราวของตัวเอง
+                <br>
+                และนี่คือจุดเริ่มต้นของการผจญภัยของฉัน
+            </p>
 
-
-            <!-- Profile Visual -->
-
-            <div class="profile-stage">
-
-                <div class="profile-aura"></div>
-
-                <div class="profile-ring ring-1"></div>
-                <div class="profile-ring ring-2"></div>
+        </section>
 
 
-                <div class="profile-photo">
+        <!-- =========================
+             CHARACTER CARD
+        ========================== -->
+
+        <section class="character-card">
+
+            <!-- Decorative circles -->
+
+            <div class="card-orbit orbit-1"></div>
+            <div class="card-orbit orbit-2"></div>
+
+
+            <!-- Profile -->
+
+            <div class="character-image">
+
+                <div class="image-glow"></div>
+
+                <div class="profile-frame">
 
                     <img
-                        src="https://placehold.co/600x750/EAF8FF/5A76B7?text=MY+PHOTO"
+                        src="https://placehold.co/500x600/e3f2fd/1976d2?text=PROFILE"
                         alt="รูปโปรไฟล์ของฉัน"
                     >
 
                 </div>
 
-
-                <div class="mini-lotus">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <b></b>
-
+                <div class="level-badge">
+                    <span>LEVEL</span>
+                    <strong>03</strong>
                 </div>
 
             </div>
 
 
-            <!-- Water -->
+            <!-- Character Information -->
 
-            <div class="hero-water">
+            <div class="character-info">
 
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
-
-
-            <div class="hero-scroll">
-                <span>SCROLL TO DISCOVER</span>
-                <i></i>
-            </div>
-
-        </section>
-
-
-        <!-- ==============================
-             PROFILE INFORMATION
-             ============================== -->
-
-        <section class="content-section">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span>
-                        ABOUT ME
-                    </span>
-
-                    <h2>
-                        สวัสดี! ฉันคือ
-                        <strong>[กรอกชื่อ]</strong>
-                    </h2>
-
-                    <p>
-                        ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
-                        ที่ชอบเรียนรู้สิ่งใหม่ ๆ
-                        และสนุกกับการสร้างสรรค์ผลงาน
-                    </p>
-
+                <div class="character-label">
+                    ✦ PLAYER INFORMATION
                 </div>
 
+                <h2>
+                    [กรอกชื่อ]
+                </h2>
 
-                <div class="profile-info-grid">
-
-                    <article class="profile-info-card">
-                        <span>NAME</span>
-                        <strong>[กรอกชื่อ]</strong>
-                    </article>
-
-                    <article class="profile-info-card">
-                        <span>NICKNAME</span>
-                        <strong>[กรอกชื่อเล่น]</strong>
-                    </article>
-
-                    <article class="profile-info-card">
-                        <span>AGE</span>
-                        <strong>[กรอกอายุ]</strong>
-                    </article>
-
-                    <article class="profile-info-card">
-                        <span>BIRTHDAY</span>
-                        <strong>[กรอกวันเกิด]</strong>
-                    </article>
-
-                    <article class="profile-info-card">
-                        <span>SCHOOL</span>
-                        <strong>[กรอกชื่อโรงเรียน]</strong>
-                    </article>
-
-                    <article class="profile-info-card">
-                        <span>LOCATION</span>
-                        <strong>[กรอกจังหวัด]</strong>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
+                <p class="nickname">
+                    “ [กรอกชื่อเล่น] ”
+                </p>
 
 
-        <!-- ==============================
-             STORY
-             ============================== -->
+                <div class="info-grid">
 
-        <section class="story-section">
+                    <div class="info-item">
 
-            <div class="story-decoration"></div>
+                        <span class="info-icon">🎂</span>
 
-            <div class="container story-grid">
+                        <div>
+                            <small>วันเกิด</small>
+                            <strong>[กรอกวันเกิด]</strong>
+                        </div>
 
-                <div>
-
-                    <span class="chapter-label dark">
-                        MY STORY
-                    </span>
-
-                    <h2>
-                        เกี่ยวกับฉัน
-                    </h2>
-
-                </div>
+                    </div>
 
 
-                <div class="story-text">
+                    <div class="info-item">
 
-                    <p>
-                        ฉันเป็นคนที่ชอบเรียนรู้
-                        และชอบทดลองทำสิ่งใหม่ ๆ
-                        เพราะเชื่อว่าทุกประสบการณ์
-                        สามารถนำมาพัฒนาตัวเองได้
-                    </p>
+                        <span class="info-icon">✨</span>
 
-                    <p>
-                        ในเวลาว่างฉันชอบ
-                        [กรอกงานอดิเรก]
-                        และมีความสนใจด้าน
-                        [กรอกความสนใจ]
-                    </p>
+                        <div>
+                            <small>อายุ</small>
+                            <strong>[กรอกอายุ] ปี</strong>
+                        </div>
+
+                    </div>
 
 
-                    <div class="story-quote">
+                    <div class="info-item">
 
-                        <span>“</span>
+                        <span class="info-icon">🏫</span>
 
-                        <p>
-                            ค่อย ๆ เรียนรู้
-                            ค่อย ๆ เติบโต
-                            และเป็นตัวเอง
-                            ในแบบที่ดีที่สุด
-                        </p>
+                        <div>
+                            <small>โรงเรียน</small>
+                            <strong>[กรอกชื่อโรงเรียน]</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-icon">📚</span>
+
+                        <div>
+                            <small>ระดับชั้น</small>
+                            <strong>ม.3/[กรอกห้อง]</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-icon">📍</span>
+
+                        <div>
+                            <small>จังหวัด</small>
+                            <strong>[กรอกจังหวัด]</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-icon">💻</span>
+
+                        <div>
+                            <small>สายที่สนใจ</small>
+                            <strong>[กรอกความสนใจ]</strong>
+                        </div>
 
                     </div>
 
@@ -283,87 +272,52 @@
         </section>
 
 
-        <!-- ==============================
-             VALUES
-             ============================== -->
+        <!-- =========================
+             ABOUT ME
+        ========================== -->
 
-        <section class="content-section">
+        <section class="about-section">
 
-            <div class="container">
+            <div class="section-title">
 
-                <div class="section-heading center">
+                <span>✦ MY STORY ✦</span>
 
-                    <span>
-                        MY VALUES
-                    </span>
+                <h2>
+                    เรื่องราวของฉัน
+                </h2>
 
-                    <h2>
-                        สิ่งที่ฉันให้ความสำคัญ
-                    </h2>
+            </div>
 
+
+            <div class="story-card">
+
+                <div class="story-decoration">
+                    🪷
                 </div>
 
+                <div class="story-content">
 
-                <div class="value-grid">
+                    <p>
+                        สวัสดี! ฉันคือ
+                        <strong>[กรอกชื่อ]</strong>
+                        นักเรียนชั้นมัธยมศึกษาปีที่ 3
+                    </p>
 
-                    <article class="value-card">
+                    <p>
+                        ฉันเป็นคนที่ชอบเรียนรู้สิ่งใหม่ ๆ
+                        และสนใจเกี่ยวกับ
+                        <strong>[กรอกความสนใจ]</strong>
+                        รวมถึงชอบใช้เวลาว่างกับ
+                        <strong>[กรอกงานอดิเรก]</strong>
+                    </p>
 
-                        <div class="value-icon">
-                            💡
-                        </div>
-
-                        <span>01</span>
-
-                        <h3>
-                            เรียนรู้
-                        </h3>
-
-                        <p>
-                            เปิดใจรับความรู้
-                            และประสบการณ์ใหม่ ๆ
-                        </p>
-
-                    </article>
-
-
-                    <article class="value-card">
-
-                        <div class="value-icon">
-                            🎨
-                        </div>
-
-                        <span>02</span>
-
-                        <h3>
-                            สร้างสรรค์
-                        </h3>
-
-                        <p>
-                            สนุกกับการคิด
-                            และสร้างผลงานของตัวเอง
-                        </p>
-
-                    </article>
-
-
-                    <article class="value-card">
-
-                        <div class="value-icon">
-                            🌱
-                        </div>
-
-                        <span>03</span>
-
-                        <h3>
-                            พัฒนา
-                        </h3>
-
-                        <p>
-                            พยายามทำให้ตัวเอง
-                            เก่งขึ้นทีละนิด
-                        </p>
-
-                    </article>
+                    <p>
+                        เว็บไซต์นี้ถูกสร้างขึ้นเพื่อเป็นพื้นที่เล็ก ๆ
+                        ที่รวบรวมเรื่องราว ตัวตน
+                        และสิ่งที่ฉันสนใจเอาไว้
+                        เหมือนกับการออกเดินทางในโลกของ
+                        <strong>LOTUS QUEST</strong>
+                    </p>
 
                 </div>
 
@@ -371,42 +325,131 @@
 
         </section>
 
+
+        <!-- =========================
+             PLAYER STATS
+        ========================== -->
+
+        <section class="stats-section">
+
+            <div class="section-title">
+
+                <span>✦ PLAYER STATUS ✦</span>
+
+                <h2>
+                    ตัวตนของฉัน
+                </h2>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">🎨</span>
+
+                    <strong>Creative</strong>
+
+                    <p>
+                        ชอบสร้างสรรค์สิ่งใหม่
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">💡</span>
+
+                    <strong>Curious</strong>
+
+                    <p>
+                        ชอบเรียนรู้และทดลอง
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">🚀</span>
+
+                    <strong>Explorer</strong>
+
+                    <p>
+                        พร้อมออกไปค้นหาประสบการณ์
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEXT QUEST
+        ========================== -->
+
+        <section class="next-quest">
+
+            <div>
+
+                <span>✦ NEXT QUEST</span>
+
+                <h2>
+                    พร้อมออกเดินทาง
+                    ไปด้วยกันหรือยัง?
+                </h2>
+
+            </div>
+
+
+            <a href="education.html" class="quest-button">
+
+                <span>เริ่มภารกิจถัดไป</span>
+
+                <strong>→</strong>
+
+            </a>
+
+        </section>
+
     </main>
 
 
-    <!-- ==============================
+    <!-- =========================
          FOOTER
-         ============================== -->
+    ========================== -->
 
-    <footer class="site-footer">
+    <footer class="footer">
 
-        <div class="container footer-content">
+        <div class="footer-lotus">
+            🪷
+        </div>
 
-            <div>
-                <a href="index.html" class="footer-brand">
-                    🪷 LOTUS PORTFOLIO
-                </a>
+        <h3>
+            LOTUS QUEST
+        </h3>
 
-                <p>
-                    Student Portfolio
-                </p>
-            </div>
+        <p>
+            Student Portfolio • [กรอกชื่อ]
+        </p>
 
-            <div class="footer-links">
+        <div class="footer-links">
 
-                <a href="index.html">หน้าแรก</a>
-                <a href="profile.html">ประวัติส่วนตัว</a>
-                <a href="education.html">การศึกษา</a>
-                <a href="hobby.html">งานอดิเรก</a>
-                <a href="contact.html">ติดต่อ</a>
-
-            </div>
+            <a href="index.html">หน้าแรก</a>
+            <a href="profile.html">โปรไฟล์</a>
+            <a href="education.html">การศึกษา</a>
+            <a href="hobby.html">งานอดิเรก</a>
+            <a href="contact.html">ติดต่อ</a>
 
         </div>
 
-        <div class="footer-bottom">
-            © 2026 [กรอกชื่อ] · Student Portfolio
-        </div>
+        <small>
+            © 2026 LOTUS QUEST • Student Portfolio
+        </small>
 
     </footer>
 
