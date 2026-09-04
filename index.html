@@ -1,240 +1,1474 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LOTUS QUEST — เว็บไซต์ Portfolio ของนักเรียนชั้นมัธยมศึกษาปีที่ 3">
-  <title>LOTUS QUEST | Home</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="home-page">
 
-  <div class="intro-screen" aria-hidden="true">
-    <div class="intro-sky"></div>
-    <div class="intro-moon"></div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="LOTUS QUEST - Student Portfolio">
+
+<title>LOTUS QUEST | Student Portfolio</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --bg:#03051c;
+    --bg2:#07112f;
+    --panel:#09173d;
+
+    --cyan:#6ffff1;
+    --aqua:#25dfff;
+
+    --pink:#ff8edb;
+    --purple:#a978ff;
+
+    --gold:#ffd98a;
+
+    --white:#ffffff;
+    --muted:#8fa1ca;
+
+    --line:rgba(130,180,255,.15);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    font-family:"Kanit",sans-serif;
+    color:var(--white);
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            #1b2865 0,
+            #0b1132 30%,
+            #05081d 65%,
+            #02030d 100%
+        );
+
+    overflow-x:hidden;
+}
+
+
+body::before{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        );
+
+    background-size:60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.45),
+            transparent 70%
+        );
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+button{
+    font:inherit;
+}
+
+
+/* ================= MOUSE GLOW ================= */
+
+#mouseGlow{
+    position:fixed;
+
+    width:320px;
+    height:320px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(109,255,241,.16),
+            rgba(169,120,255,.09) 35%,
+            rgba(255,105,205,.04) 50%,
+            transparent 72%
+        );
+
+    filter:blur(6px);
+
+    mix-blend-mode:screen;
+}
+
+
+#mouseDot{
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:white;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px var(--cyan),
+        0 0 30px var(--pink);
+}
+
+
+/* ================= STAR TRAIL ================= */
+
+.mouse-star{
+    position:fixed;
+
+    z-index:9997;
+
+    pointer-events:none;
+
+    color:white;
+
+    font-size:11px;
+
+    text-shadow:
+        0 0 8px var(--cyan),
+        0 0 18px var(--pink);
+
+    animation:
+        trail .7s ease-out forwards;
+}
+
+
+@keyframes trail{
+
+    from{
+        opacity:1;
+        transform:scale(.3);
+    }
+
+    to{
+        opacity:0;
+
+        transform:
+            translate(var(--x),var(--y))
+            scale(1.5)
+            rotate(150deg);
+    }
+}
+
+
+/* ================= CLICK RIPPLE ================= */
+
+.click-ripple{
+    position:fixed;
+
+    width:10px;
+    height:10px;
+
+    transform:translate(-50%,-50%);
+
+    border:
+        2px solid var(--cyan);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:9996;
+
+    box-shadow:
+        0 0 14px var(--cyan),
+        0 0 25px var(--pink);
+
+    animation:
+        click .85s ease-out forwards;
+}
+
+
+@keyframes click{
+
+    to{
+        width:180px;
+        height:180px;
+        opacity:0;
+    }
+}
+
+
+/* ================= NAV ================= */
+
+.site-header{
+    position:fixed;
+
+    top:14px;
+    left:0;
+    right:0;
+
+    z-index:5000;
+
+    padding:0 14px;
+}
+
+
+.navbar{
+
+    width:min(1200px,94%);
+
+    min-height:64px;
+
+    margin:auto;
+
+    padding:
+        9px 15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    background:
+        rgba(4,10,31,.68);
+
+    border:
+        1px solid var(--line);
+
+    border-radius:25px;
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.25);
+}
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    white-space:nowrap;
+}
+
+
+.logo-symbol{
+
+    width:42px;
+    height:42px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    color:#07182a;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            #72dcff 48%,
+            var(--pink)
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(104,231,255,.25);
+
+    transition:.35s;
+}
+
+
+.logo:hover .logo-symbol{
+
+    transform:
+        rotate(10deg)
+        scale(1.08);
+}
+
+
+.logo-name{
+
+    font:
+        500 18px
+        "Playfair Display",serif;
+}
+
+
+.logo-name b{
+
+    display:block;
+
+    color:var(--pink);
+
+    font:
+        600 8px
+        "Kanit",sans-serif;
+
+    letter-spacing:3px;
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+
+.nav-links a{
+
+    position:relative;
+
+    color:#afbddf;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:white;
+
+    text-shadow:
+        0 0 12px
+        rgba(115,255,242,.7);
+}
+
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--cyan)
+        );
+
+    box-shadow:
+        0 0 8px
+        var(--cyan);
+
+    transition:.3s;
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+}
+
+
+/* ================= MUSIC BUTTON ================= */
+
+.music-button{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(115,255,242,.22);
+
+    color:#d9e8ff;
+
+    background:
+        rgba(255,255,255,.035);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.music-button:hover,
+.music-button.playing{
+
+    color:var(--pink);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 25px
+        rgba(255,120,210,.25);
+}
+
+
+/* ================= INTRO ================= */
+
+.intro-check{
+    display:none;
+}
+
+
+.intro{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    overflow:hidden;
+
+    background:#02040f;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease,
+        transform 1s ease;
+}
+
+
+.intro-check:checked + .intro{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:scale(1.04);
+
+    pointer-events:none;
+}
+
+
+.intro-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 50% 27%,
+            rgba(115,255,242,.15),
+            transparent 22%
+        ),
+
+        radial-gradient(
+            circle at 25% 60%,
+            rgba(169,120,255,.10),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #02040f,
+            #071735 55%,
+            #061b2d
+        );
+}
+
+
+.intro-moon{
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    left:10%;
+    top:9%;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff,
+            #e0f8f8 55%,
+            #a4bfd0
+        );
+
+    box-shadow:
+        0 0 45px
+        rgba(225,250,250,.3),
+
+        0 0 90px
+        rgba(100,220,255,.12);
+
+    animation:
+        moon 5s ease-in-out infinite;
+}
+
+
+@keyframes moon{
+
+    50%{
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+.intro-stars span{
+
+    position:absolute;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 25px var(--cyan);
+
+    animation:
+        blink 3s ease-in-out infinite;
+}
+
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+
+
+/* ================= WATER ================= */
+
+.intro-water{
+
+    position:absolute;
+
+    left:-8%;
+
+    bottom:-100px;
+
+    width:116%;
+    height:48%;
+
+    border-radius:50%;
+
+    background:
+
+        repeating-radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,.06) 0 2px,
+            transparent 3px 35px
+        ),
+
+        linear-gradient(
+            180deg,
+            #0a5068,
+            #061a2d
+        );
+
+    animation:
+        waterMove 8s ease-in-out infinite;
+}
+
+
+@keyframes waterMove{
+
+    50%{
+        transform:
+            translateX(-2%)
+            scaleY(1.04);
+    }
+}
+
+
+.intro-water span,
+.ripple-lines span{
+
+    position:absolute;
+
+    left:50%;
+    top:22%;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        1px solid
+        rgba(115,255,242,.2);
+
+    border-radius:50%;
+
+    animation:
+        ripple 5s ease-in-out infinite;
+}
+
+
+.intro-water span:nth-child(1){
+
+    width:190px;
+    height:45px;
+}
+
+
+.intro-water span:nth-child(2){
+
+    width:340px;
+    height:82px;
+
+    animation-delay:1s;
+}
+
+
+.intro-water span:nth-child(3){
+
+    width:520px;
+    height:120px;
+
+    animation-delay:2s;
+}
+
+
+@keyframes ripple{
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:
+            translateX(-50%)
+            scale(.94);
+    }
+
+    50%{
+
+        opacity:.9;
+
+        transform:
+            translateX(-50%)
+            scale(1.08);
+    }
+}
+
+
+/* ================= LOTUS ================= */
+
+.lotus{
+
+    position:absolute;
+
+    width:280px;
+    height:215px;
+}
+
+
+.intro-lotus{
+
+    left:50%;
+    bottom:16%;
+
+    transform:
+        translateX(-50%);
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,105,210,.35)
+        );
+
+    animation:
+        lotusFloat
+        4.5s ease-in-out infinite;
+}
+
+
+@keyframes lotusFloat{
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            translateY(-10px);
+    }
+}
+
+
+.petal{
+
+    position:absolute;
+
+    left:50%;
+    bottom:10px;
+
+    transform-origin:
+        50% 100%;
+
+    border-radius:
+        72% 72% 40% 40%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaff 0%,
+            #ffe8f6 24%,
+            #ffabd9 63%,
+            #c64b99 100%
+        );
+
+    box-shadow:
+
+        inset 5px 0 12px
+        rgba(255,255,255,.35),
+
+        inset -8px 0 15px
+        rgba(105,25,88,.18),
+
+        0 0 14px
+        rgba(255,128,215,.13);
+}
+
+
+.petal::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:8%;
+
+    width:2px;
+    height:77%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.3),
+            rgba(125,43,103,.16)
+        );
+}
+
+
+.petal.outer{
+
+    width:78px;
+    height:128px;
+}
+
+
+.petal.mid{
+
+    width:66px;
+    height:108px;
+}
+
+
+.petal.inner{
+
+    width:54px;
+    height:88px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffaff,
+            #ffd6ea 30%,
+            #ed8ebf 73%,
+            #b9498e
+        );
+}
+
+
+.o1{
+    transform:
+        translateX(-50%)
+        rotate(0);
+}
+
+.o2{
+    transform:
+        translateX(-50%)
+        rotate(55deg)
+        scale(.95);
+}
+
+.o3{
+    transform:
+        translateX(-50%)
+        rotate(-55deg)
+        scale(.95);
+}
+
+.o4{
+    transform:
+        translateX(-50%)
+        rotate(105deg)
+        scale(.78);
+}
+
+.o5{
+    transform:
+        translateX(-50%)
+        rotate(-105deg)
+        scale(.78);
+}
+
+.o6{
+    transform:
+        translateX(-50%)
+        rotate(180deg)
+        scale(.73);
+}
+
+
+.m1{
+    transform:
+        translateX(-50%)
+        rotate(0)
+        scale(.80);
+}
+
+.m2{
+    transform:
+        translateX(-50%)
+        rotate(58deg)
+        scale(.73);
+}
+
+.m3{
+    transform:
+        translateX(-50%)
+        rotate(-58deg)
+        scale(.73);
+}
+
+.m4{
+    transform:
+        translateX(-50%)
+        rotate(112deg)
+        scale(.61);
+}
+
+.m5{
+    transform:
+        translateX(-50%)
+        rotate(-112deg)
+        scale(.61);
+}
+
+
+.i1{
+    transform:
+        translateX(-50%)
+        rotate(18deg)
+        scale(.55);
+}
+
+.i2{
+    transform:
+        translateX(-50%)
+        rotate(138deg)
+        scale(.52);
+}
+
+.i3{
+    transform:
+        translateX(-50%)
+        rotate(-102deg)
+        scale(.52);
+}
+
+
+.lotus-center{
+
+    position:absolute;
+
+    left:50%;
+    bottom:10px;
+
+    width:50px;
+    height:50px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff9bd 0 18%,
+            #ffd879 20% 40%,
+            #ebb64e 42% 67%,
+            #c9852d 68%
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(255,220,128,.50);
+}
+
+
+.lotus-center::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:7px;
+
+    border-radius:50%;
+
+    background:
+        repeating-conic-gradient(
+            rgba(145,92,33,.65) 0 7deg,
+            transparent 7deg 16deg
+        );
+
+    opacity:.55;
+}
+
+
+/* ================= INTRO TEXT ================= */
+
+.intro-content{
+
+    position:absolute;
+
+    left:50%;
+    top:17%;
+
+    z-index:25;
+
+    width:min(900px,92%);
+
+    transform:
+        translateX(-50%);
+
+    text-align:center;
+
+    animation:
+        introText 1.3s ease both;
+}
+
+
+@keyframes introText{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translate(-50%,25px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,0);
+    }
+}
+
+
+.intro-content>span{
+
+    color:var(--cyan);
+
+    font-size:11px;
+
+    letter-spacing:5px;
+}
+
+
+.intro-content h1{
+
+    margin:12px 0;
+
+    font:
+        500 clamp(56px,10vw,115px)/.88
+        "Playfair Display",serif;
+
+    letter-spacing:5px;
+}
+
+
+.intro-content h1 b{
+
+    display:block;
+
+    color:var(--pink);
+
+    font-size:.42em;
+
+    letter-spacing:12px;
+
+    margin-top:10px;
+}
+
+
+.intro-content p{
+
+    margin-top:22px;
+
+    color:#dfcbed;
+
+    font:
+        italic 18px
+        "Playfair Display",serif;
+}
+
+
+.intro-line{
+
+    width:95px;
+
+    height:1px;
+
+    margin:21px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--pink),
+            transparent
+        );
+}
+
+
+.intro-content small{
+
+    color:#7181aa;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+
+.enter{
+
+    position:absolute;
+
+    left:50%;
+    bottom:10%;
+
+    z-index:30;
+
+    transform:
+        translateX(-50%);
+
+    min-width:250px;
+    min-height:62px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    border:
+        1px solid
+        rgba(115,255,242,.48);
+
+    border-radius:50px;
+
+    color:white;
+
+    background:
+        rgba(5,21,42,.55);
+
+    backdrop-filter:
+        blur(14px);
+
+    cursor:pointer;
+
+    letter-spacing:2px;
+
+    font-size:12px;
+
+    transition:.35s;
+}
+
+
+.enter:hover{
+
+    transform:
+        translateX(-50%)
+        translateY(-5px);
+
+    box-shadow:
+        0 0 32px
+        rgba(115,255,242,.3);
+}
+
+
+.enter b{
+
+    color:var(--pink);
+
+    font-size:18px;
+}
+
+
+.intro-hint{
+
+    position:absolute;
+
+    left:50%;
+    bottom:4%;
+
+    transform:
+        translateX(-50%);
+
+    color:#50628a;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- MOUSE EFFECT -->
+
+<div id="mouseGlow"></div>
+
+<div id="mouseDot"></div>
+
+
+<!-- =====================================================
+     MUSIC
+     เพลงจะถูกฝังตรงนี้
+===================================================== -->
+
+<audio id="music" loop preload="auto">
+
+    <source
+        src="data:audio/mpeg;base64,PASTE_EMBEDDED_AUDIO_BASE64_HERE"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- INTRO TOGGLE -->
+
+<input
+    type="checkbox"
+    id="introToggle"
+    class="intro-check">
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="intro-bg"></div>
+
+
     <div class="intro-stars">
-      <i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>✦</i><i>·</i>
+
+        <span
+            style="left:12%;top:20%">✦</span>
+
+        <span
+            style="left:25%;top:31%">✧</span>
+
+        <span
+            style="left:39%;top:14%">✦</span>
+
+        <span
+            style="right:26%;top:28%">✧</span>
+
+        <span
+            style="right:12%;top:17%">✦</span>
+
+        <span
+            style="right:31%;top:18%">·</span>
+
     </div>
-    <div class="intro-mist intro-mist-a"></div>
-    <div class="intro-mist intro-mist-b"></div>
+
+
+    <div class="intro-moon"></div>
+
 
     <div class="intro-water">
-      <span class="ripple r1"></span>
-      <span class="ripple r2"></span>
-      <span class="ripple r3"></span>
+
+        <span></span>
+        <span></span>
+        <span></span>
+
     </div>
 
-    <div class="intro-lotus">
-      <span class="lp lp1"></span>
-      <span class="lp lp2"></span>
-      <span class="lp lp3"></span>
-      <span class="lp lp4"></span>
-      <span class="lp lp5"></span>
-      <span class="lp lp6"></span>
-      <b></b>
+
+    <div class="lotus intro-lotus">
+
+        <span class="petal outer o1"></span>
+        <span class="petal outer o2"></span>
+        <span class="petal outer o3"></span>
+        <span class="petal outer o4"></span>
+        <span class="petal outer o5"></span>
+        <span class="petal outer o6"></span>
+
+        <span class="petal mid m1"></span>
+        <span class="petal mid m2"></span>
+        <span class="petal mid m3"></span>
+        <span class="petal mid m4"></span>
+        <span class="petal mid m5"></span>
+
+        <span class="petal inner i1"></span>
+        <span class="petal inner i2"></span>
+        <span class="petal inner i3"></span>
+
+        <span class="lotus-center"></span>
+
     </div>
 
-    <div class="intro-petals">
-      <i>✧</i><i>✦</i><i>·</i><i>✧</i>
-    </div>
 
     <div class="intro-content">
-      <span class="intro-kicker">WELCOME TO</span>
-      <h1>LOTUS <span>QUEST</span></h1>
-      <p>A Student Adventure</p>
-      <div class="intro-line"></div>
-      <small>✦ A little world about me ✦</small>
-    </div>
 
-    <a class="intro-enter" href="index.html#home-content">
-      ENTER WORLD <b>→</b>
-    </a>
-  </div>
+        <span>
+            STUDENT PORTFOLIO
+        </span>
 
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">🪷</span>
-        <span>LOTUS <b>QUEST</b></span>
-      </a>
-
-      <div class="nav-links">
-        <a class="active" href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="hobby.html">งานอดิเรก</a>
-        <a href="contact.html">ติดต่อ</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="home-content">
-
-    <section class="home-hero">
-      <div class="home-hero-bg"></div>
-      <div class="floating-orb orb-a"></div>
-      <div class="floating-orb orb-b"></div>
-
-      <div class="home-grid container">
-
-        <div class="home-copy reveal-up">
-          <span class="eyebrow">STUDENT PORTFOLIO</span>
-
-          <h2>
-            สวัสดีครับ/ค่ะ<br>
-            ฉันชื่อ <span>[กรอกชื่อ]</span>
-          </h2>
-
-          <p class="home-lead">
-            นักเรียนชั้นมัธยมศึกษาปีที่ 3
-            ที่ชอบเรียนรู้สิ่งใหม่ ๆ
-            และสนุกกับการสร้างสรรค์ผลงาน
-          </p>
-
-          <p class="home-text">
-            ยินดีต้อนรับสู่โลกเล็ก ๆ ของฉัน
-            ที่รวมประวัติส่วนตัว การศึกษา
-            งานอดิเรก และความสนใจไว้ในที่เดียว
-          </p>
-
-          <div class="button-row">
-            <a class="btn btn-primary" href="profile.html">
-              รู้จักฉันมากขึ้น <b>→</b>
-            </a>
-
-            <a class="btn btn-ghost" href="hobby.html">
-              ดูงานอดิเรก
-            </a>
-          </div>
-
-          <div class="mini-stats">
-            <div>
-              <strong>01</strong>
-              <span>PROFILE</span>
-            </div>
-
-            <div>
-              <strong>02</strong>
-              <span>JOURNEY</span>
-            </div>
-
-            <div>
-              <strong>03</strong>
-              <span>HOBBY</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="home-scene reveal-scale">
-
-          <div class="scene-halo"></div>
-
-          <div class="scene-lotus large-lotus">
-            <span class="lp lp1"></span>
-            <span class="lp lp2"></span>
-            <span class="lp lp3"></span>
-            <span class="lp lp4"></span>
-            <span class="lp lp5"></span>
-            <span class="lp lp6"></span>
-            <b></b>
-          </div>
-
-          <div class="scene-water">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="leaf leaf-left"></div>
-          <div class="leaf leaf-right"></div>
-
-          <div class="scene-particle p1">✦</div>
-          <div class="scene-particle p2">✧</div>
-          <div class="scene-particle p3">·</div>
-
-          <div class="scene-badge">
-            <span>🪷</span>
-
-            <div>
-              <strong>LOTUS LAKE</strong>
-              <small>My little world</small>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="chapter-section section-light">
-      <div class="container">
-
-        <div class="section-heading centered">
-          <span>EXPLORE MY WORLD</span>
-          <h2>เลือกบทที่อยากรู้จัก</h2>
-          <p>แต่ละหน้าคืออีกหนึ่งมุมของตัวฉัน</p>
-        </div>
-
-        <div class="chapter-grid">
-
-          <a class="chapter-card blue" href="profile.html">
-            <div class="chapter-icon">✦</div>
-            <span>CHAPTER 01</span>
-            <h3>WHO AM I?</h3>
-            <p>ทำความรู้จักตัวตนและเรื่องราวของฉัน</p>
-            <b>เปิดบทนี้ →</b>
-          </a>
-
-          <a class="chapter-card purple" href="education.html">
-            <div class="chapter-icon">◇</div>
-            <span>CHAPTER 02</span>
-            <h3>MY JOURNEY</h3>
-            <p>สำรวจเส้นทางการเรียนรู้และการเติบโต</p>
-            <b>เปิดบทนี้ →</b>
-          </a>
-
-          <a class="chapter-card pink" href="hobby.html">
-            <div class="chapter-icon">✿</div>
-            <span>CHAPTER 03</span>
-            <h3>MY WORLD</h3>
-            <p>รู้จักสิ่งที่ฉันชอบและความสนใจ</p>
-            <b>เปิดบทนี้ →</b>
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-top container">
-
-      <div>
-        <a href="index.html" class="footer-brand">
-          🪷 LOTUS QUEST
-        </a>
+        <h1>
+            LOTUS
+            <b>QUEST</b>
+        </h1>
 
         <p>
-          Student Portfolio • [กรอกชื่อ]
+            My little world • My little story
         </p>
-      </div>
 
-      <div class="footer-nav">
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="hobby.html">งานอดิเรก</a>
-        <a href="contact.html">ติดต่อ</a>
-      </div>
+        <div class="intro-line"></div>
+
+        <small>
+            EXPLORE • LEARN • CREATE
+        </small>
 
     </div>
 
-    <div class="footer-bottom">
-      © 2026 [กรอกชื่อ] • LOTUS QUEST
-    </div>
-  </footer>
 
-</body>
-</html>
+    <label
+        for="introToggle"
+        class="enter">
+
+        ENTER MY WORLD
+
+        <b>→</b>
+
+    </label>
+
+
+    <div class="intro-hint">
+        CLICK TO BEGIN
+    </div>
+
+</section>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="site-header">
+
+    <nav class="navbar">
+
+
+        <a
+            href="index.html"
+            class="logo">
+
+            <span class="logo-symbol">
+                ✿
+            </span>
+
+            <span class="logo-name">
+
+                LOTUS
+
+                <b>
+                    QUEST
+                </b>
+
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a
+                href="index.html"
+                class="active">
+
+                หน้าแรก
+
+            </a>
+
+            <a href="profile.html">
+                ประวัติส่วนตัว
+            </a>
+
+            <a href="education.html">
+                การศึกษา
+            </a>
+
+            <a href="hobby.html">
+                งานอดิเรก
+            </a>
+
+            <a href="contact.html">
+                ติดต่อ
+            </a>
+
+        </div>
+
+
+        <button
+            class="music-button"
+            id="musicButton">
+
+            ♫
+
+        </button>
+
+
+    </nav>
+
+</header>
+<script>
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+musicButton.addEventListener(
+    "click",
+    async () => {
+
+        try {
+
+            if (music.paused) {
+
+                await music.play();
+
+                musicButton.textContent =
+                    "🔊";
+
+                musicButton.classList.add(
+                    "playing"
+                );
+
+            } else {
+
+                music.pause();
+
+                musicButton.textContent =
+                    "♫";
+
+                musicButton.classList.remove(
+                    "playing"
+                );
+
+            }
+
+        } catch(error) {
+
+            console.log(
+                "ไม่สามารถเล่นเสียงได้",
+                error
+            );
+
+        }
+
+    }
+);
+
+</script>
