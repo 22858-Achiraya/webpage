@@ -1,275 +1,1110 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ประวัติส่วนตัวของนักเรียน">
-  <title>LOTUS QUEST | ประวัติส่วนตัว</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOTUS PORTFOLIO | PROFILE</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root{
+    --night:#03051c;
+    --deep:#07102e;
+    --cyan:#6ffff1;
+    --aqua:#25dfff;
+    --pink:#ff8edb;
+    --purple:#a978ff;
+    --gold:#ffd98a;
+    --white:#fff;
+    --muted:#91a0c8;
+    --line:rgba(150,180,255,.18);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Kanit",sans-serif;
+
+    min-height:100vh;
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            #1b2860,
+            #080d29 45%,
+            #02030e 100%
+        );
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(60,230,255,.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,100,210,.07),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.015) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        auto,
+        auto,
+        60px 60px,
+        60px 60px;
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:30vh;
+
+    z-index:-1;
+
+    background:
+
+        repeating-radial-gradient(
+            ellipse at center,
+            rgba(90,255,245,.035) 0 2px,
+            transparent 3px 38px
+        );
+
+    pointer-events:none;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.site-header{
+
+    position:fixed;
+
+    top:18px;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+}
+
+.navbar{
+
+    width:min(1180px,92%);
+
+    margin:auto;
+
+    padding:
+        12px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border:
+        1px solid
+        rgba(255,160,230,.2);
+
+    border-radius:30px;
+
+    background:
+        rgba(5,12,39,.65);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 10px 50px
+        rgba(0,0,0,.2);
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-family:
+        "Playfair Display";
+
+    font-size:20px;
+}
+
+.logo-icon{
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9de2,
+            #a979ff
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(255,120,220,.5);
+}
+
+.logo strong{
+
+    display:block;
+
+    color:var(--cyan);
+
+    font-family:"Kanit";
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:28px;
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:#b8c8eb;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#fff;
+
+    text-shadow:
+        0 0 12px
+        var(--cyan);
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--cyan)
+        );
+
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-btn{
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(110,255,241,.25);
+
+    color:var(--cyan);
+
+    background:
+        rgba(255,255,255,.04);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.music-btn:hover,
+.music-btn.playing{
+
+    color:var(--pink);
+
+    box-shadow:
+        0 0 25px
+        rgba(255,120,220,.25);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+
+    min-height:100vh;
+
+    padding:
+        155px 6% 90px;
+}
+
+.container{
+
+    width:min(1120px,100%);
+
+    margin:auto;
+}
+
+.page-heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.page-heading span{
+
+    color:var(--cyan);
+
+    font-size:11px;
+
+    letter-spacing:4px;
+}
+
+.page-heading h1{
+
+    margin:
+        10px 0;
+
+    font-family:
+        "Playfair Display";
+
+    font-size:
+        clamp(45px,6vw,70px);
+}
+
+.page-heading p{
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-layout{
+
+    display:grid;
+
+    grid-template-columns:
+        340px 1fr;
+
+    gap:28px;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card{
+
+    position:relative;
+
+    min-height:500px;
+
+    padding:35px 28px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(100,245,245,.10),
+            transparent 35%
+        ),
+        rgba(8,15,43,.65);
+
+    backdrop-filter:
+        blur(18px);
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+.profile-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    left:50%;
+    top:-100px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,120,220,.14),
+            transparent 70%
+        );
+}
+
+.profile-symbol{
+
+    position:relative;
+
+    width:165px;
+    height:165px;
+
+    margin:auto;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    font-size:78px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.07),
+            rgba(70,235,255,.06) 45%,
+            rgba(255,100,210,.08)
+        );
+
+    border:
+        1px solid
+        rgba(140,245,255,.18);
+
+    box-shadow:
+        0 0 45px
+        rgba(90,240,255,.12);
+}
+
+.profile-card h2{
+
+    margin-top:25px;
+
+    font-family:
+        "Playfair Display";
+
+    font-size:29px;
+}
+
+.profile-card .nickname{
+
+    margin-top:6px;
+
+    color:var(--pink);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+.profile-card .role{
+
+    margin-top:24px;
+
+    padding:
+        8px 15px;
+
+    display:inline-block;
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(110,255,241,.2);
+
+    color:var(--cyan);
+
+    font-size:10px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.details{
+
+    display:grid;
+
+    gap:18px;
+}
+
+.info-card{
+
+    padding:27px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:25px;
+
+    background:
+        rgba(8,15,43,.65);
+
+    backdrop-filter:
+        blur(18px);
+
+    transition:.35s;
+}
+
+.info-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(110,255,241,.4);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.2);
+}
+
+.info-card small{
+
+    color:var(--cyan);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.info-card h3{
+
+    margin-top:7px;
+
+    font-family:
+        "Playfair Display";
+
+    font-size:24px;
+}
+
+.info-card p{
+
+    margin-top:9px;
+
+    color:#91a2c9;
+
+    line-height:1.9;
+
+    font-size:13px;
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
+}
+
+.stat-card{
+
+    padding:23px 15px;
+
+    text-align:center;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:22px;
+
+    background:
+        rgba(8,15,43,.65);
+
+    transition:.35s;
+}
+
+.stat-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 0 30px
+        rgba(100,240,255,.08);
+}
+
+.stat-card strong{
+
+    display:block;
+
+    color:var(--pink);
+
+    font-family:
+        "Playfair Display";
+
+    font-size:29px;
+}
+
+.stat-card span{
+
+    color:#7383ad;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+    text-align:center;
+
+    padding:
+        65px 20px 30px;
+
+    background:
+        rgba(1,5,20,.8);
+
+    border-top:
+        1px solid
+        rgba(140,180,255,.12);
+}
+
+.footer-icon{
+
+    font-size:40px;
+
+    color:var(--pink);
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(255,100,220,.5)
+        );
+}
+
+.footer h3{
+
+    margin-top:10px;
+
+    font-family:
+        "Playfair Display";
+
+    font-size:23px;
+}
+
+.footer p{
+
+    margin-top:5px;
+
+    color:#7182aa;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+    .profile-layout{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        width:94%;
+    }
+
+    .page{
+        padding:
+            125px 18px 65px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .profile-symbol{
+        width:140px;
+        height:140px;
+        font-size:65px;
+    }
+
+}
+
+</style>
+
 </head>
 
-<body class="profile-page">
 
-  <header class="site-header">
-    <nav class="navbar container">
+<body>
 
-      <a href="index.html" class="brand">
-        <span class="brand-mark">🪷</span>
-        <span>LOTUS <b>QUEST</b></span>
-      </a>
 
-      <div class="nav-links">
-        <a href="index.html">หน้าแรก</a>
-        <a class="active" href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="hobby.html">งานอดิเรก</a>
-        <a href="contact.html">ติดต่อ</a>
-      </div>
+<audio id="bgMusic" loop preload="auto">
+    <source
+        src="audio/lotus-music.mp3"
+        type="audio/mpeg">
+</audio>
 
-    </nav>
-  </header>
 
-  <main>
+<header class="site-header">
 
-    <section class="page-hero profile-hero">
+<nav class="navbar">
 
-      <div class="hero-scene-layer">
-        <div class="hero-moon"></div>
-        <div class="mist m1"></div>
-        <div class="mist m2"></div>
 
-        <div class="hero-stars">
-          ✦　✧　·　✦　·　✧
-        </div>
+<a href="index.html" class="logo">
 
-        <div class="hero-water">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+    <span class="logo-icon">
+        🪷
+    </span>
 
-      <div class="page-title">
-        <span>CHAPTER 01</span>
-        <h1>WHO AM I?</h1>
-        <p>เรื่องราวเล็ก ๆ ของคนคนหนึ่ง</p>
-      </div>
+    <span>
 
-    </section>
+        LOTUS
 
+        <strong>
+            PORTFOLIO
+        </strong>
 
-    <section class="content-section">
+    </span>
 
-      <div class="container">
+</a>
 
-        <div class="profile-layout">
 
-          <div class="profile-visual">
+<div class="nav-links">
 
-            <div class="portrait-glow"></div>
-            <div class="portrait-ring ring-a"></div>
-            <div class="portrait-ring ring-b"></div>
+    <a href="index.html">
+        หน้าแรก
+    </a>
 
-            <div class="portrait">
-              <img
-                src="https://placehold.co/600x760/EAF8FF/5573B5?text=MY+PHOTO"
-                alt="รูปโปรไฟล์ของฉัน"
-              >
-            </div>
+    <a
+        href="profile.html"
+        class="active">
+        ประวัติส่วนตัว
+    </a>
 
-            <div class="portrait-tag">
-              🪷 MY STORY
-            </div>
+    <a href="education.html">
+        การศึกษา
+    </a>
 
-          </div>
+    <a href="hobby.html">
+        งานอดิเรก
+    </a>
 
+    <a href="contact.html">
+        ติดต่อ
+    </a>
 
-          <div class="profile-copy">
+</div>
 
-            <span class="section-label">
-              PLAYER PROFILE
-            </span>
 
-            <h2>
-              [กรอกชื่อ]
-            </h2>
+<button
+    class="music-btn"
+    id="musicBtn">
 
-            <p class="profile-nickname">
-              “ [กรอกชื่อเล่น] ”
-            </p>
+    ♫
 
-            <p>
-              ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
-              ที่ชอบเรียนรู้ ทดลอง
-              และสร้างผลงานของตัวเอง
-            </p>
+</button>
 
-            <div class="info-grid">
 
-              <div class="info-box">
-                <span>วันเกิด</span>
-                <strong>[กรอกวันเกิด]</strong>
-              </div>
+</nav>
 
-              <div class="info-box">
-                <span>อายุ</span>
-                <strong>[กรอกอายุ] ปี</strong>
-              </div>
+</header>
 
-              <div class="info-box">
-                <span>โรงเรียน</span>
-                <strong>[กรอกชื่อโรงเรียน]</strong>
-              </div>
 
-              <div class="info-box">
-                <span>ระดับชั้น</span>
-                <strong>ม.3/[กรอกห้อง]</strong>
-              </div>
+<main class="page">
 
-              <div class="info-box">
-                <span>จังหวัด</span>
-                <strong>[กรอกจังหวัด]</strong>
-              </div>
-
-              <div class="info-box">
-                <span>ความสนใจ</span>
-                <strong>[กรอกความสนใจ]</strong>
-              </div>
 
-            </div>
+<div class="container">
 
-          </div>
 
-        </div>
+<div class="page-heading">
 
-      </div>
+    <span>
+        CHAPTER 01 · WHO AM I?
+    </span>
 
-    </section>
+    <h1>
+        ประวัติส่วนตัว
+    </h1>
 
+    <p>
+        เรื่องราวเล็ก ๆ ที่บอกความเป็นตัวฉัน
+    </p>
 
-    <section class="story-section">
+</div>
 
-      <div class="container story-grid">
 
-        <div>
-          <span class="section-label">
-            MY STORY
-          </span>
+<div class="profile-layout">
 
-          <h2>
-            เกี่ยวกับฉัน
-          </h2>
-        </div>
 
-        <div class="story-copy">
+<div class="profile-card">
 
-          <p>
-            ฉันชอบเรียนรู้สิ่งใหม่ ๆ
-            และสนุกกับการทำกิจกรรม
-            ที่ช่วยให้ได้พัฒนาตัวเอง
-          </p>
 
-          <p>
-            ในเวลาว่างฉันชอบ
-            <strong>[กรอกงานอดิเรก]</strong>
-            และสนใจด้าน
-            <strong>[กรอกความสนใจ]</strong>
-          </p>
+<div class="profile-symbol">
+    🪷
+</div>
 
-          <div class="quote">
-            “
-            <span>
-              ค่อย ๆ เรียนรู้
-              ค่อย ๆ เติบโต
-              และเป็นตัวเอง
-              ในแบบที่ดีที่สุด
-            </span>
-            ”
-          </div>
 
-        </div>
+<h2>
+    [กรอกชื่อ]
+</h2>
 
-      </div>
 
-    </section>
+<div class="nickname">
+    [ชื่อเล่น]
+</div>
 
 
-    <section class="content-section">
+<div class="role">
+    STUDENT • DREAMER • CREATOR
+</div>
 
-      <div class="container">
 
-        <div class="section-heading centered">
-          <span>MY VALUES</span>
-          <h2>สิ่งที่ฉันให้ความสำคัญ</h2>
-        </div>
+</div>
 
-        <div class="value-grid">
 
-          <article>
-            <div>💡</div>
-            <span>01</span>
-            <h3>เรียนรู้</h3>
-            <p>
-              เปิดใจรับความรู้และประสบการณ์ใหม่ ๆ
-            </p>
-          </article>
+<div class="details">
 
-          <article>
-            <div>🎨</div>
-            <span>02</span>
-            <h3>สร้างสรรค์</h3>
-            <p>
-              สนุกกับการคิดและสร้างผลงานของตัวเอง
-            </p>
-          </article>
 
-          <article>
-            <div>🌱</div>
-            <span>03</span>
-            <h3>พัฒนา</h3>
-            <p>
-              พยายามทำให้ตัวเองเก่งขึ้นทีละนิด
-            </p>
-          </article>
+<div class="info-card">
 
-        </div>
+    <small>
+        FULL NAME
+    </small>
 
-      </div>
+    <h3>
+        [ชื่อ - นามสกุล]
+    </h3>
 
-    </section>
+    <p>
+        [เขียนชื่อและนามสกุล]
+    </p>
 
-  </main>
+</div>
 
 
-  <footer class="site-footer">
+<div class="info-card">
 
-    <div class="footer-top container">
+    <small>
+        ABOUT ME
+    </small>
 
-      <div>
-        <a href="index.html" class="footer-brand">
-          🪷 LOTUS QUEST
-        </a>
+    <h3>
+        เกี่ยวกับฉัน
+    </h3>
 
-        <p>
-          Student Portfolio • [กรอกชื่อ]
-        </p>
-      </div>
+    <p>
+        [เขียนแนะนำตัวเอง เช่น
+        ลักษณะนิสัย ความชอบ
+        ความสามารถ หรือสิ่งที่สนใจ]
+    </p>
 
-      <div class="footer-nav">
-        <a href="index.html">หน้าแรก</a>
-        <a href="profile.html">ประวัติส่วนตัว</a>
-        <a href="education.html">การศึกษา</a>
-        <a href="hobby.html">งานอดิเรก</a>
-        <a href="contact.html">ติดต่อ</a>
-      </div>
+</div>
 
+
+<div class="info-card">
+
+    <small>
+        MY DREAM
+    </small>
+
+    <h3>
+        ความฝันของฉัน
+    </h3>
+
+    <p>
+        [เขียนความฝัน
+        หรือเป้าหมายในอนาคต]
+    </p>
+
+</div>
+
+
+<div class="stats">
+
+
+<div class="stat-card">
+
+    <strong>
+        03
+    </strong>
+
+    <span>
+        GRADE
+    </span>
+
+</div>
+
+
+<div class="stat-card">
+
+    <strong>
+        01
+    </strong>
+
+    <span>
+        DREAM
+    </span>
+
+</div>
+
+
+<div class="stat-card">
+
+    <strong>
+        ∞
+    </strong>
+
+    <span>
+        POSSIBILITIES
+    </span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-icon">
+        🪷
     </div>
 
-    <div class="footer-bottom">
-      © 2026 [กรอกชื่อ] • LOTUS QUEST
-    </div>
+    <h3>
+        LOTUS PORTFOLIO
+    </h3>
 
-  </footer>
+    <p>
+        Student Portfolio • [กรอกชื่อ]
+    </p>
+
+</footer>
+
+
+<script>
+
+const music =
+    document.getElementById(
+        "bgMusic"
+    );
+
+const btn =
+    document.getElementById(
+        "musicBtn"
+    );
+
+
+const savedTime =
+    localStorage.getItem(
+        "lotusMusicTime"
+    );
+
+
+if(savedTime){
+
+    music.addEventListener(
+        "loadedmetadata",
+        () => {
+
+            music.currentTime =
+                Number(savedTime);
+
+        }
+    );
+
+}
+
+
+music.addEventListener(
+    "timeupdate",
+    () => {
+
+        localStorage.setItem(
+            "lotusMusicTime",
+            music.currentTime
+        );
+
+    }
+);
+
+
+btn.addEventListener(
+    "click",
+    async () => {
+
+        try{
+
+            if(music.paused){
+
+                await music.play();
+
+                btn.textContent =
+                    "🔊";
+
+                btn.classList.add(
+                    "playing"
+                );
+
+            }else{
+
+                music.pause();
+
+                btn.textContent =
+                    "♫";
+
+                btn.classList.remove(
+                    "playing"
+                );
+
+            }
+
+        }catch(error){
+
+            console.log(error);
+
+        }
+
+    }
+);
+
+</script>
 
 </body>
 </html>
